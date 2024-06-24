@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #121212;
+    color: white;
+}
+
+.tab-content {
+    flex-grow: 1;
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.earn-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-task, .daily-task, .task-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.video-task:hover, .daily-task:hover, .task-item:hover {
+    background-color: #333;
+}
+
+.task-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.task-info {
+    flex-grow: 1;
+}
+
+.task-info p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.reward {
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+.arrow-icon, .status-icon {
+    width: 24px;
+    height: 24px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tab-container {
+    width: 100%;
+    background: #000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    border-top: 1px solid #333;
+}
+
+.tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tabs li {
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+.tabs li.active, .tabs li:hover {
+    background-color: #333;
+}
+
+.tab-icon {
+    width: 24px;
+    height: 24px;
+    margin-bottom: 5px;
+}
+
+.reward-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.reward-button {
+    padding: 10px;
+    background-color: #1e1e1e;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: left;
+    padding-left: 20px;
+    transition: background-color 0.3s;
+}
+
+.reward-button:hover {
+    background-color: #333;
+}
+
+.task-content {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+}
+
+.task-content h3 {
+    margin-top: 0;
+}
+
+.task-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.task-content ul li {
+    padding: 5px 0;
+}
