@@ -5,15 +5,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #121212;
+    color: white;
 }
 
 .tab-content {
     flex-grow: 1;
     display: none;
     padding: 20px;
-    background-color: #121212;
-    color: white;
-    border-top: 1px solid #333;
 }
 
 .tab-content.active {
@@ -22,11 +21,12 @@ body {
 
 .tab-container {
     width: 100%;
-    background: #333;
+    background: #000;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 1000;
+    border-top: 1px solid #333;
 }
 
 .tabs {
@@ -35,34 +35,56 @@ body {
     margin: 0;
     display: flex;
     justify-content: space-around;
-    background-color: #333;
-    border-top: 1px solid #444;
 }
 
 .tabs li {
-    padding: 14px 20px;
+    padding: 10px 0;
     cursor: pointer;
-    color: white;
     text-align: center;
     transition: background-color 0.3s;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: 1;
 }
 
 .tabs li:hover {
-    background-color: #555;
+    background-color: #333;
 }
 
 .tabs .active {
-    background-color: #666;
+    color: #9b59b6;
+    border-top: 2px solid #9b59b6;
 }
 
-.tabs li i {
-    font-size: 24px;
+.tabs li img.tab-icon {
+    width: 24px;
+    height: 24px;
     margin-bottom: 5px;
 }
 
 .tabs li span {
-    font-size: 14px;
+    font-size: 12px;
+}
+
+.reward-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.reward-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.reward-button:hover {
+    background-color: #444;
 }
