@@ -17,8 +17,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     rewardButtons.forEach(button => {
         button.addEventListener('click', function() {
-            let url = this.getAttribute('data-url');
+			 let url = this.getAttribute('data-url');
             window.location.href = url;
+            let taskId = this.getAttribute('data-task');
+            let taskContent = document.getElementById(taskId);
+
+            document.querySelectorAll('.task-content').forEach(content => {
+                content.style.display = 'none';
+            });
+
+            if (taskContent) {
+                taskContent.style.display = 'block';
+            }
         });
     });
 });
