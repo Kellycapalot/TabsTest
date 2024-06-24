@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Navigation Tabs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="tab-1" class="tab-content active">
+        <h2>Home</h2>
+        <p>Welcome to the home page!</p>
+    </div>
+    <div id="tab-2" class="tab-content">
+        <h2>About</h2>
+        <p>About us page content goes here.</p>
+    </div>
+    <div id="tab-3" class="tab-content">
+        <h2>Services</h2>
+        <p>Details about services offered.</p>
+    </div>
+    <div id="tab-4" class="tab-content">
+        <h2>Contact</h2>
+        <p>Contact information goes here.</p>
+    </div>
+    <div id="tab-5" class="tab-content">
+        <h2>Gallery</h2>
+        <p>Gallery content goes here.</p>
+    </div>
+
+    <div class="tab-container">
+        <ul class="tabs">
+            <li class="tab-link active" data-tab="tab-1">Home</li>
+            <li class="tab-link" data-tab="tab-2">About</li>
+            <li class="tab-link" data-tab="tab-3">Services</li>
+            <li class="tab-link" data-tab="tab-4">Contact</li>
+            <li class="tab-link" data-tab="tab-5">Gallery</li>
+        </ul>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
