@@ -50,14 +50,14 @@
                     </div>
                     <img src="icons/arrow-right.png" alt="Arrow Icon" class="arrow-icon">
                 </div>
-                <div class="task-item">
-                    <img src="icons/x.png" alt="X Icon" class="task-icon">
-                    <div class="task-info">
-                        <p>Follow our X account</p>
-                        <span class="reward">+5,000</span>
-                    </div>
-                    <img src="icons/arrow-right.png" alt="Arrow Icon" class="arrow-icon">
-                </div>
+                <button class="reward-button" data-task="task-follow-x">
+    <img src="icons/x.png" alt="Icon" class="task-icon">
+    <div class="task-info">
+        <p>Follow our X account</p>
+        <p class="reward">+5,000</p>
+    </div>
+    <img src="icons/arrow-right.png" alt="Arrow Icon" class="arrow-icon">
+</button>
                 <div class="task-item">
                     <img src="icons/youtube.png" alt="YouTube Icon" class="task-icon">
                     <div class="task-info">
@@ -74,6 +74,19 @@
                     </div>
                     <img src="icons/arrow-right.png" alt="Arrow Icon" class="arrow-icon">
                 </div>
+                <!-- Modal Structure -->
+<div id="task-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+            <img src="icons/x.png" alt="Icon" class="task-icon">
+            <h2>Follow our X account</h2>
+            <p class="reward">+5,000</p>
+            <button class="join-button">Join</button>
+            <button class="follow-button">Follow X</button>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </div>
