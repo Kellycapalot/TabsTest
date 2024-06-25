@@ -17,11 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 document.getElementById('first-name').textContent = firstName;
                 document.getElementById('last-name').textContent = lastName;
-
                 // Generate a unique referral link
                 const baseUrl = "https://t.me/thetechpandabot";
 				const referralLink = `${baseUrl}?start=r_${userId}`;
-
                 // Display the referral link
                 const referralUrlElement = document.getElementById('referral-url');
                 referralUrlElement.href = referralLink;
@@ -31,13 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById('referral-link').textContent = '';
             }
         });
-
         // Force trigger the init event for testing
         window.Telegram.WebApp.ready();
     } else {
         console.error("Telegram Web App script not loaded");
     }
-	
+});
  // Tab switching functionality
     const tabButtons = document.querySelectorAll(".tab-button");
     const tabContents = document.querySelectorAll(".tab-content");
@@ -70,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById(tabId).classList.add("active");
         });
     });
-
     // Modal functionality
     const modals = {
         "follow-x-modal": document.getElementById("follow-x-modal"),
@@ -149,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     // Get the button element by its ID
     const invitefrbutton = document.getElementById("invitefr-button");
-    
+
     // Add an event listener to the button
     invitefrbutton.addEventListener("click", function() {
         // Navigate to the specified URL
