@@ -101,4 +101,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // Navigate to the specified URL
         window.open("https://t.me/+HONPv-1-cmEwODU8", "_blank");
     });
+     // Get the button element by its ID
+    const xfollowbutton = document.getElementById("xfollow-button");
+    
+    // Add an event listener to the button
+    xfollowbutton.addEventListener("click", function() {
+        // Navigate to the specified URL
+        window.open("https://x.com/thetechpandabot, "_blank");
+    });
 });
