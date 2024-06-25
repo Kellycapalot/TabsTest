@@ -18,14 +18,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Open the third tab by default
-    tabButtons[2].classList.add('active');
-    tabContents[2].classList.add('active');
+    // Open the third tab by default (index 2 since it's zero-based)
+    if (tabButtons.length >= 3 && tabContents.length >= 3) {
+        tabButtons[2].classList.add('active');
+        tabContents[2].classList.add('active');
+    } else {
+        console.warn('There are less than 3 tabs available.');
+    }
 
     // Modal functionality
     const modals = {
         'follow-x-modal': document.getElementById('follow-x-modal'),
-        'subscribeyt-modal': document.getElementById('bgm-modal')
+        'bgm-modal': document.getElementById('bgm-modal')
         // Add more modals here if needed
     };
 
