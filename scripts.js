@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Get all modals
     var modals = {
         'follow-x-modal': document.getElementById('follow-x-modal'),
-        'bgm-modal': document.getElementById('bgm-modal')
+        'subscribeyt-modal': document.getElementById('subscribeyt-modal')
         // Add more modals here if needed
     };
 
