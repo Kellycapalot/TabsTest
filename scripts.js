@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const modals = {
         "follow-x-modal": document.getElementById("follow-x-modal"),
         "subscribeyt-modal": document.getElementById("subscribeyt-modal"),
+         "ytdaily1-modal": document.getElementById("ytdaily1-modal"),
         // Add more modals here if needed
     };
 
