@@ -120,6 +120,11 @@ h3 {
     margin-bottom: 5px;
 }
 
+.reward-buttons-container {
+    height: calc(100vh - 100px); /* Adjust this value based on your layout */
+    overflow-y: auto;
+}
+
 .reward-buttons, .daily-task {
     display: flex;
     flex-direction: column;
