@@ -168,7 +168,7 @@ h3 {
     z-index: 1000;
     left: 0;
     top: 0;
-    bottom: 50;
+    transform: translateY(-50%); /*to make it move downwards*/
     width: 100%;
     height: 100%;
     overflow: auto;
