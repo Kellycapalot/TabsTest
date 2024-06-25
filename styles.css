@@ -10,7 +10,9 @@ body {
 }
 
 .tab-content {
+    flex-grow: 1;
     display: none;
+    padding: 20px;
 }
 
 .tab-content.active {
