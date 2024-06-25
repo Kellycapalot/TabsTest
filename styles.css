@@ -216,7 +216,7 @@ h3 {
     margin: 0;
 }
 
-.follow-button, .check-button .jointelegram-button {
+.follow-button, .check-button, .jointelegram-button, .dailyreward-button {
     padding: 12px 24px;
     background-color: #3498db;
     border: none;
@@ -231,7 +231,7 @@ h3 {
     font-weight: bold;
 }
 
-.follow-button:hover, .check-button:hover .jointelegram-button:hover {
+.follow-button:hover, .check-button:hover, .jointelegram-button:hover, .dailyreward-button:hover {
     background-color: #2980b9;
 }
 
