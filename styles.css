@@ -58,6 +58,13 @@ body {
     font-weight: bold;
 }
 
+.rewardmodal {
+    color: #f1c40f;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
 .arrow-icon, .status-icon {
     width: 24px;
     height: 24px;
