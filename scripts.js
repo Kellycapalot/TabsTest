@@ -1,51 +1,43 @@
-document.addEventListener('DOMContentLoaded', function() {
-    let tabLinks = document.querySelectorAll('.tab-link');
-    let tabContents = document.querySelectorAll('.tab-content');
-    let rewardButtons = document.querySelectorAll('.reward-button');
+document.addEventListener("DOMContentLoaded", function() {
+    // Get all modals
+    var modals = {
+        "follow-x-modal": document.getElementById("follow-x-modal"),
+        "bgm-modal": document.getElementById("bgm-modal")
+        // Add more modals here if needed
+    };
 
-    tabLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            let tabId = this.getAttribute('data-tab');
+    // Get the close elements for each modal
+    var closeElements = document.querySelectorAll(".modal .close");
 
-            tabLinks.forEach(link => link.classList.remove('active'));
-            tabContents.forEach(content => content.classList.remove('active'));
+    // Reward buttons
+    var buttons = document.querySelectorAll(".reward-button");
 
-            this.classList.add('active');
-            document.getElementById(tabId).classList.add('active');
-        });
-    });
-
-    rewardButtons.forEach(button => {
-        button.addEventListener('click', function(event) {
-            event.preventDefault();  // Prevent default action
-
-            let taskId = this.getAttribute('data-task');
-            let taskContent = document.getElementById(taskId);
-
-            document.querySelectorAll('.task-content').forEach(content => {
-                content.style.display = 'none';
-            });
-
-            if (taskContent) {
-                taskContent.style.display = 'block';
-            }
-
-            let modal = document.getElementById('task-modal');
-            modal.style.display = 'block';
-        });
-    });
-
-    let closeModal = document.querySelector('.close');
-
-    closeModal.addEventListener('click', function() {
-        let modal = document.getElementById('task-modal');
-        modal.style.display = 'none';
-    });
-
-    window.addEventListener('click', function(event) {
-        let modal = document.getElementById('task-modal');
-        if (event.target == modal) {
-            modal.style.display = 'none';
+    // Function to handle button click
+    function handleButtonClick(event) {
+        var buttonId = event.currentTarget.id;
+        var modalId = buttonId.replace("button", "modal"); // Replace "button" with "modal" to get the modal ID
+        var modal = modals[modalId];
+        if (modal) {
+            modal.style.display = "block";
         }
+    }
+
+    // Attach event listeners to reward buttons
+    buttons.forEach(function(button) {
+        button.addEventListener("click", handleButtonClick);
     });
+
+    // When the user clicks on <span> (x), close the modal
+    closeElements.forEach(function(close) {
+        close.onclick = function() {
+            close.parentElement.parentElement.style.display = "none";
+        };
+    });
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.style.display = "none";
+        }
+    };
 });
