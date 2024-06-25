@@ -10,7 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
         window.Telegram.WebApp.onEvent('init', function() {
             console.log("Telegram Web App Initialized");
 
-            const user = window.Telegram.WebApp.initDataUnsafe.user;
+            // Log the entire initDataUnsafe object
+            const initDataUnsafe = window.Telegram.WebApp.initDataUnsafe;
+            console.log("initDataUnsafe:", initDataUnsafe);
+
+            // Extract user data
+            const user = initDataUnsafe.user;
             console.log("User Data:", user);
 
             if (user) {
