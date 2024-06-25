@@ -40,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "subscribeyt-modal": document.getElementById("subscribeyt-modal"),
          "ytdaily1-modal": document.getElementById("ytdaily1-modal"),
          "join-telegram-modal": document.getElementById("join-telegram-modal"),
+         "daily-reward-modal": document.getElementById("daily-reward-modal"),
         // Add more modals here if needed
     };
 
