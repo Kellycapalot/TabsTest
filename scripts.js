@@ -107,6 +107,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add an event listener to the button
     xfollowbutton.addEventListener("click", function() {
         // Navigate to the specified URL
-        window.open("https://x.com/thetechpandabot, "_blank");
+        window.open("https://x.com/thetechpandabot", "_blank");
     });
 });
