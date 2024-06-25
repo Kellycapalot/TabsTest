@@ -25,7 +25,7 @@ body {
     gap: 20px;
 }
 
-.video-task, .daily-task, .task-item {
+.video-task, .task-item {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -34,7 +34,7 @@ body {
     transition: background-color 0.3s;
 }
 
-.video-task:hover, .daily-task:hover, .task-item:hover {
+.video-task:hover, .task-item:hover {
     background-color: #333;
 }
 
@@ -76,7 +76,7 @@ h3 {
     color: #ffffff;
 }
 
-.task-list {
+.task-list, .daily-task {
     display: flex;
     flex-direction: column;
     gap: 10px;
