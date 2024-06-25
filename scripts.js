@@ -111,10 +111,10 @@ document.addEventListener("DOMContentLoaded", function () {
         window.open("https://x.com/thetechpandabot", "_blank");
     });
     // Get the button element by its ID
-    const invitefriendsbutton = document.getElementById("invite-friends-button");
+    const invitefrbutton = document.getElementById("invitefr-button");
     
     // Add an event listener to the button
-    invitefriendsbutton.addEventListener("click", function() {
+    invitefrbutton.addEventListener("click", function() {
         // Navigate to the specified URL
         window.open("https://t.me/share/url?url=t.me/thetechpandabot?start=%reflink%", "_blank");
     });
