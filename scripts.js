@@ -16,8 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     rewardButtons.forEach(button => {
-        button.addEventListener('click', function() {
-			 let url = this.getAttribute('data-url');
+        button.addEventListener('click', function(event) {
+            event.preventDefault();  // Prevent default action
+
+		let url = this.getAttribute('data-url');
             window.location.href = url;
             let taskId = this.getAttribute('data-task');
             let taskContent = document.getElementById(taskId);
@@ -29,25 +31,21 @@ document.addEventListener('DOMContentLoaded', function() {
             if (taskContent) {
                 taskContent.style.display = 'block';
             }
-        });
-    });
-});
 
-    // Modal functionality
-    let modal = document.getElementById('task-modal');
-    let closeModal = document.querySelector('.close');
-
-    rewardButtons.forEach(button => {
-        button.addEventListener('click', function() {
+            let modal = document.getElementById('task-modal');
             modal.style.display = 'block';
         });
     });
 
+    let closeModal = document.querySelector('.close');
+
     closeModal.addEventListener('click', function() {
+        let modal = document.getElementById('task-modal');
         modal.style.display = 'none';
     });
 
     window.addEventListener('click', function(event) {
+        let modal = document.getElementById('task-modal');
         if (event.target == modal) {
             modal.style.display = 'none';
         }
