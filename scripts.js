@@ -39,6 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         "follow-x-modal": document.getElementById("follow-x-modal"),
         "subscribeyt-modal": document.getElementById("subscribeyt-modal"),
          "ytdaily1-modal": document.getElementById("ytdaily1-modal"),
+         "join-telegram-modal": document.getElementById("join-telegram-modal"),
         // Add more modals here if needed
     };
 
