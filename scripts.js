@@ -93,4 +93,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // Navigate to the specified URL
         window.open("https://youtube.com/@thetechpandauniverse", "_blank");
     });
+     // Get the button element by its ID
+    const tgjoinbutton = document.getElementById("tgjoin-button");
+    
+    // Add an event listener to the button
+    tgjoinbutton.addEventListener("click", function() {
+        // Navigate to the specified URL
+        window.open("https://t.me/+HONPv-1-cmEwODU8", "_blank");
+    });
 });
