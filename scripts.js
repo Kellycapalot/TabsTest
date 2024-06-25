@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.error("Telegram Web App script not loaded");
     }
-});
+	
  // Tab switching functionality
     const tabButtons = document.querySelectorAll(".tab-button");
     const tabContents = document.querySelectorAll(".tab-content");
