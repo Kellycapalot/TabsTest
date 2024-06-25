@@ -211,7 +211,7 @@ h3 {
 }
 
 .follow-button, .check-button {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #3498db;
     border: none;
     color: white;
@@ -220,6 +220,9 @@ h3 {
     width: 100%;
     max-width: 200px;
     margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
 }
 
 .follow-button:hover, .check-button:hover {
