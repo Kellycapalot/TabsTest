@@ -128,35 +128,41 @@ h3 {
 }
 
 .reward-button {
+    padding: 10px;
+    background-color: #1e1e1e;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    text-align: left;
+    padding-left: 20px;
+    transition: background-color 0.3s;
     display: flex;
     align-items: center;
-    background-color: #222;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.reward-button:hover {
+    background-color: #333;
+}
+
+.reward-buttonii {
     padding: 10px;
+    background-color: #1e1e1e;
+    border: none;
+    color: white;
     cursor: pointer;
-    width: 100%;
+    border-radius: 10px;
+    text-align: left;
+    padding-left: 20px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.reward-button .task-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-
-.reward-button .task-info {
-    flex: 1;
-}
-
-.reward-button .task-info p {
-    margin: 0;
-    font-size: 16px;
-}
-
-.reward-button .reward {
-    color: #ff0;
-    font-weight: bold;
+.reward-buttonii:hover {
+    background-color: #333;
 }
 
 .reward-button .arrow-icon {
