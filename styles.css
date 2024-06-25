@@ -227,7 +227,7 @@ h3 {
 }
 
 .subscribe-button {
-    padding: 8px 16px;
+    padding: 15px 30px;
     background-color: #f44336;
     border: none;
     color: white;
@@ -236,6 +236,8 @@ h3 {
     width: 100%;
     max-width: 200px;
     margin-top: 10px;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .subscribe-button:hover {
