@@ -68,14 +68,14 @@
                     </div>
                     <img src="icons/arrow-right.png" alt="Arrow Icon" class="arrow-icon">
                 </div>
-                <div class="task-item">
-                    <img src="icons/invite.png" alt="Invite Icon" class="task-icon">
-                    <div class="task-info">
-                        <p>Invite 3 friends</p>
-                        <span class="reward">+75,000</span>
-                    </div>
-                    <img src="icons/arrow-right.png" alt="Arrow Icon" class="arrow-icon">
-                </div>
+               <button id="invite-friends-button" class="reward-button" data-task="task-invite-3-friends">
+    <img src="icons/invite.png" alt="Invite Icon" class="task-icon">
+    <div class="task-info">
+        <p>Invite 3 friends</p>
+        <p class="reward">+75,000</p>
+    </div>
+    <img src="icons/arrow-right.png" alt="Arrow Icon" class="arrow-icon">
+</button>
             </div>
         </div>
     </div>
@@ -179,6 +179,19 @@
             <p class="rewardmodal">+10,000</p>
             <button class="dailyreward-button">Claim now!</button>
             <button class="check-button">Check</button>
+        </div>
+    </div>
+</div>
+
+    <div id="invite-friends-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+            <img src="icons/invite.png" alt="Invite Icon" class="task-icon">
+            <h2>Join Telegram Community</h2>
+            <p class="rewardmodal">+100,000</p>
+             <button id="invitefr-button" class="invitefriends-button">Invite 3 friends</button>
+             <button id="invitefrcheck-button" class="check-button">Check</button>
         </div>
     </div>
 </div>
