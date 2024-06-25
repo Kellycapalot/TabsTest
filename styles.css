@@ -229,7 +229,7 @@ h3 {
     background-color: #2980b9;
 }
 
-.subscribe-button {
+.subscribe-button, .ytdaily-button {
     padding: 13px 26px;
     background-color: #f44336;
     border: none;
@@ -244,6 +244,6 @@ h3 {
     font-weight: bold;
 }
 
-.subscribe-button:hover {
+.subscribe-button:hover .ytdaily-button:hover {
     background-color: #d1281c;
 }
