@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabButtons = document.querySelectorAll('.tab-button');
     const tabContents = document.querySelectorAll('.tab-content');
 
+    // Log the number of tabs and contents found
+    console.log(`Number of tab buttons: ${tabButtons.length}`);
+    console.log(`Number of tab contents: ${tabContents.length}`);
+
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             // Remove active class from all tab buttons and contents
@@ -18,8 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Open the third tab by default (index 2 since it's zero-based)
+    // Ensure at least 3 tabs are present
     if (tabButtons.length >= 3 && tabContents.length >= 3) {
+        // Open the third tab by default (index 2 since it's zero-based)
         tabButtons[2].classList.add('active');
         tabContents[2].classList.add('active');
     } else {
@@ -29,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Modal functionality
     const modals = {
         'follow-x-modal': document.getElementById('follow-x-modal'),
-        'bgm-modal': document.getElementById('bgm-modal')
+        'subscribeyt-modal': document.getElementById('bgm-modal')
         // Add more modals here if needed
     };
 
