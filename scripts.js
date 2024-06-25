@@ -2,29 +2,32 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM fully loaded and parsed");
 
     window.Telegram.WebApp.onEvent('init', function() {
-    const user = window.Telegram.WebApp.initDataUnsafe.user;
+            console.log("Telegram Web App Initialized");
 
-    if (user) {
-        const firstName = user.first_name || 'N/A';
-        const lastName = user.last_name || 'N/A';
-        const userId = user.id || 'unknown';
+            const user = window.Telegram.WebApp.initDataUnsafe.user;
+            console.log("User Data:", user);
 
-        document.getElementById('first-name').textContent = firstName;
-        document.getElementById('last-name').textContent = lastName;
+            if (user) {
+                const firstName = user.first_name || 'N/A';
+                const lastName = user.last_name || 'N/A';
+                const userId = user.id || 'unknown';
 
-        // Generate a unique referral link
-        const baseUrl = "https://t.me/thetechpandabot";
-        const referralLink = `${baseUrl}?start=r_${userId}`;
+                document.getElementById('first-name').textContent = firstName;
+                document.getElementById('last-name').textContent = lastName;
 
-        // Display the referral link
-        const referralUrlElement = document.getElementById('referral-url');
-        referralUrlElement.href = referralLink;
-        referralUrlElement.textContent = referralLink;
-    } else {
-        document.getElementById('user-info').textContent = 'No user information available';
-        document.getElementById('referral-link').textContent = '';
-    }
-});
+                // Generate a unique referral link
+                const baseUrl = "https://t.me/thetechpandabot";
+				const referralLink = `${baseUrl}?start=r_${userId}`;
+
+                // Display the referral link
+                const referralUrlElement = document.getElementById('referral-url');
+                referralUrlElement.href = referralLink;
+                referralUrlElement.textContent = referralLink;
+            } else {
+                document.getElementById('user-info').textContent = 'No user information available';
+                document.getElementById('referral-link').textContent = '';
+            }
+        });
 
     // Tab switching functionality
     const tabButtons = document.querySelectorAll(".tab-button");
