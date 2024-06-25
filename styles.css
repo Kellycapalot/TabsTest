@@ -241,7 +241,7 @@ h3 {
     margin: 0;
 }
 
-.follow-button, .check-button, .jointelegram-button, .dailyreward-button {
+.follow-button, .check-button, .jointelegram-button, .dailyreward-button, .invite-friends-button {
     padding: 12px 24px;
     background-color: #3498db;
     border: none;
@@ -256,7 +256,7 @@ h3 {
     font-weight: bold;
 }
 
-.follow-button:hover, .check-button:hover, .jointelegram-button:hover, .dailyreward-button:hover {
+.follow-button:hover, .check-button:hover, .jointelegram-button:hover, .dailyreward-button:hover, .invite-friends-button:hover {
     background-color: #2980b9;
 }
 
