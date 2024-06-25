@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Modal functionality
     const modals = {
         'follow-x-modal': document.getElementById('follow-x-modal'),
-        'subscribeyt-modal': document.getElementById('bgm-modal')
+        'subscribeyt-modal': document.getElementById('subscribeyt-modal')
         // Add more modals here if needed
     };
 
