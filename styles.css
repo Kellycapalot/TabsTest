@@ -210,7 +210,7 @@ h3 {
     margin: 0;
 }
 
-.follow-button, .check-button {
+.follow-button, .check-button, .watch-button {
     padding: 10px 20px;
     background-color: #3498db;
     border: none;
@@ -222,6 +222,6 @@ h3 {
     margin-top: 10px;
 }
 
-.follow-button:hover, .check-button:hover {
+.follow-button:hover, .check-button:hover, .watch-button:hover {
     background-color: #2980b9;
 }
