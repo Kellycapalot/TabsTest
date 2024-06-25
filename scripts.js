@@ -1,5 +1,8 @@
+console.log("Custom script loaded");
+
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM fully loaded and parsed");
+    
     // Ensure the Telegram WebApp script is loaded
     if (window.Telegram) {
         console.log("Telegram Web App script loaded");
