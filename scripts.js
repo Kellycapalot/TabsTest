@@ -85,4 +85,13 @@ document.addEventListener("DOMContentLoaded", function () {
         // Navigate to the specified URL
         window.open("https://youtube.com/@thetechpandauniverse", "_blank");
     });
+
+    // Get the button element by its ID
+    const ytdailybutton = document.getElementById("ytdaily-button");
+    
+    // Add an event listener to the button
+    ytdailybutton.addEventListener("click", function() {
+        // Navigate to the specified URL
+        window.open("https://youtube.com/@thetechpandauniverse", "_blank");
+    });
 });
