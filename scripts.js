@@ -1,6 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM fully loaded and parsed");
 
+    window.Telegram.WebApp.onEvent('init', function() {
+    const user = window.Telegram.WebApp.initDataUnsafe.user;
+
+    if (user) {
+        const firstName = user.first_name || 'N/A';
+        const lastName = user.last_name || 'N/A';
+        const userId = user.id || 'unknown';
+
+        document.getElementById('first-name').textContent = firstName;
+        document.getElementById('last-name').textContent = lastName;
+
+        // Generate a unique referral link
+        const baseUrl = "https://t.me/thetechpandabot";
+        const referralLink = `${baseUrl}?start=r_${userId}`;
+
+        // Display the referral link
+        const referralUrlElement = document.getElementById('referral-url');
+        referralUrlElement.href = referralLink;
+        referralUrlElement.textContent = referralLink;
+    } else {
+        document.getElementById('user-info').textContent = 'No user information available';
+        document.getElementById('referral-link').textContent = '';
+    }
+});
+
     // Tab switching functionality
     const tabButtons = document.querySelectorAll(".tab-button");
     const tabContents = document.querySelectorAll(".tab-content");
