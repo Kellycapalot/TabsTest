@@ -41,6 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
          "ytdaily1-modal": document.getElementById("ytdaily1-modal"),
          "join-telegram-modal": document.getElementById("join-telegram-modal"),
          "daily-reward-modal": document.getElementById("daily-reward-modal"),
+        "invite-friends-modal": document.getElementById("invite-friends-modal"),
         // Add more modals here if needed
     };
 
@@ -108,5 +109,13 @@ document.addEventListener("DOMContentLoaded", function () {
     xfollowbutton.addEventListener("click", function() {
         // Navigate to the specified URL
         window.open("https://x.com/thetechpandabot", "_blank");
+    });
+    // Get the button element by its ID
+    const invitefriendsbutton = document.getElementById("invite-friends-button");
+    
+    // Add an event listener to the button
+    invitefriendsbutton.addEventListener("click", function() {
+        // Navigate to the specified URL
+        window.open("https://t.me/share/url?url=t.me/thetechpandabot?start=%reflink%", "_blank");
     });
 });
