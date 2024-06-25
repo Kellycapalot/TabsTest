@@ -25,7 +25,7 @@ body {
     gap: 20px;
 }
 
-.video-task, .task-item {
+.video-task, .daily-task, .task-item {
     display: flex;
     align-items: center;
     padding: 10px;
@@ -76,7 +76,7 @@ h3 {
     color: #ffffff;
 }
 
-.task-list, .daily-task {
+.task-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
