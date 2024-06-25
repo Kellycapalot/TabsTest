@@ -77,4 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
             event.target.style.display = "none";
         }
     };
+    // Get the button element by its ID
+    const ytsubbutton = document.getElementById("ytsub-button");
+    
+    // Add an event listener to the button
+    ytsubbutton.addEventListener("click", function() {
+        // Navigate to the specified URL
+        window.location.href = "https://youtube.com/@thetechpandauniverse";
+    });
 });
