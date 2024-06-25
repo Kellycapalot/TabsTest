@@ -15,14 +15,14 @@
     <div id="tab-2" class="tab-content">
         <h2>Earn</h2>
        <div class="reward-buttons">
-    <button class="reward-button" data-url="https://youtube.com/@thetechpandauniverse?si=5f6zqkySI6vkT0TL?sub_confirmation=1">
-        <img src="icons/youtube.png" alt="Icon" class="task-icon">
-        <div class="task-info">
-            <p>Subscribe to our YouTube channel</p>
-            <p class="reward">+100,000</p>
-        </div>
-        <img src="icons/arrow-right.png" alt="Arrow" class="arrow-icon">
-    </button>
+   <button id="subscribeyt-button" class="reward-button">
+     <img src="icons/youtube.png" alt="Icon" class="task-icon">
+    <div class="task-info">
+        <p>Subscribe to our YouTube channel</p>
+        <p class="reward">+100,000</p>
+    </div>
+   <img src="icons/arrow-right.png" alt="Arrow" class="arrow-icon">
+</button>
             <button class="reward-button" data-url="https://youtube.com/@thetechpandauniverse">
         <img src="icons/youtube.png" alt="Icon" class="task-icon">
         <div class="task-info">
@@ -128,7 +128,17 @@
             </div>
         </div>
     </div>
-    
+
+    <div id="subscribeyt-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="modal-body">
+            <img src="icons/bgm.png" alt="Icon" class="task-icon">
+            <h2>Subscribe to our YouTube channel</h2>
+            <p class="reward">+100,000</p>
+            <button class="watch-button">Watch Video</button>
+             <button class="check-button">Check</button>
+            
     <script src="scripts.js"></script>
 </body>
 </html>
