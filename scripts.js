@@ -19,8 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', function(event) {
             event.preventDefault();  // Prevent default action
 
-		let url = this.getAttribute('data-url');
-            window.location.href = url;
             let taskId = this.getAttribute('data-task');
             let taskContent = document.getElementById(taskId);
 
