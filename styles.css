@@ -286,11 +286,13 @@ h3 {
 
 #tab-1 h2 {
     font-size: 24px;
+    text-align: center;
     margin-bottom: 10px;
 }
 
 #tab-1 p {
     font-size: 16px;
+    text-align: center;
     margin-bottom: 20px;
 }
 
