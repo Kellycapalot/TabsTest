@@ -10,9 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // Check WebApp version for additional debug info
         console.log("Telegram WebApp version:", window.Telegram.WebApp.version);
 
+        // Ensure the WebApp is marked as ready
+        window.Telegram.WebApp.ready();
+
         // Add a ready handler
-        window.Telegram.WebApp.onEvent('init', function() {
-            console.log("Telegram Web App Initialized");
+        window.Telegram.WebApp.onEvent('ready', function() {
+            console.log("Telegram Web App is now ready");
 
             // Log the entire initDataUnsafe object
             const initDataUnsafe = window.Telegram.WebApp.initDataUnsafe;
@@ -48,13 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Ensure the WebApp is marked as ready
-        window.Telegram.WebApp.ready();
-
-        // Trigger the init event manually for testing
-        window.Telegram.WebApp.onEvent('init', function() {
-            console.log("Manual init event triggered");
-        });
+        // Additional logging for troubleshooting
+        console.log("Added ready event handler");
     } else {
         console.error("Telegram Web App script not loaded");
     }
