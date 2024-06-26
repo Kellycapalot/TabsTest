@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.Telegram) {
         console.log("Telegram Web App script loaded");
 
+        // Check WebApp version for additional debug info
+        console.log("Telegram WebApp version:", window.Telegram.WebApp.version);
+
+        // Add a ready handler
         window.Telegram.WebApp.onEvent('init', function() {
             console.log("Telegram Web App Initialized");
 
@@ -14,34 +18,43 @@ document.addEventListener("DOMContentLoaded", function () {
             const initDataUnsafe = window.Telegram.WebApp.initDataUnsafe;
             console.log("initDataUnsafe:", initDataUnsafe);
 
-            // Extract user data
-            const user = initDataUnsafe.user;
-            console.log("User Data:", user);
+            if (initDataUnsafe) {
+                // Extract user data
+                const user = initDataUnsafe.user;
+                console.log("User Data:", user);
 
-            if (user) {
-                const firstName = user.first_name || 'N/A';
-                const lastName = user.last_name || 'N/A';
-                const userId = user.id || 'unknown';
+                if (user) {
+                    const firstName = user.first_name || 'N/A';
+                    const lastName = user.last_name || 'N/A';
+                    const userId = user.id || 'unknown';
 
-                document.getElementById('first-name').textContent = firstName;
-                document.getElementById('last-name').textContent = lastName;
+                    document.getElementById('first-name').textContent = firstName;
+                    document.getElementById('last-name').textContent = lastName;
 
-                // Generate a unique referral link
-                const baseUrl = "https://yourwebsite.com/referral";
-                const referralLink = `${baseUrl}?ref=${userId}`;
+                    // Generate a unique referral link
+                    const baseUrl = "https://yourwebsite.com/referral";
+                    const referralLink = `${baseUrl}?ref=${userId}`;
 
-                // Display the referral link
-                const referralUrlElement = document.getElementById('referral-url');
-                referralUrlElement.href = referralLink;
-                referralUrlElement.textContent = referralLink;
+                    // Display the referral link
+                    const referralUrlElement = document.getElementById('referral-url');
+                    referralUrlElement.href = referralLink;
+                    referralUrlElement.textContent = referralLink;
+                } else {
+                    document.getElementById('user-info').textContent = 'No user information available';
+                    document.getElementById('referral-link').textContent = '';
+                }
             } else {
-                document.getElementById('user-info').textContent = 'No user information available';
-                document.getElementById('referral-link').textContent = '';
+                console.error("initDataUnsafe is not defined or is empty");
             }
         });
 
-        // Force trigger the init event for testing
+        // Ensure the WebApp is marked as ready
         window.Telegram.WebApp.ready();
+
+        // Trigger the init event manually for testing
+        window.Telegram.WebApp.onEvent('init', function() {
+            console.log("Manual init event triggered");
+        });
     } else {
         console.error("Telegram Web App script not loaded");
     }
