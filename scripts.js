@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
    const referralsContainer = document.getElementById('referrals-container');
 
     // Invite button's functionality
-    document.querySelector('.copy-button').addEventListener('click', function() {
+    document.querySelector('.refinvite-button').addEventListener('click', function() {
     const url = 'https://t.me/share/url?url=t.me/thetechpandabot?start=%reflink%';
     window.open(url, '_blank');
 });
