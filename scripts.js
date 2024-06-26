@@ -172,9 +172,50 @@ document.addEventListener("DOMContentLoaded", function () {
         // Navigate to the specified URL
         window.open("https://t.me/share/url?url=t.me/thetechpandabot?start=%reflink%", "_blank");
     });
-    document.querySelector('.refinvite-button').addEventListener('click', function() {
-    const url = 'https://t.me/share/url?url=t.me/thetechpandabot?start=%reflink%';
-    window.open(url, '_blank');
-});
+   const referralsContainer = document.getElementById('referrals-container');
+
+    // Function to fetch referral data
+    async function fetchReferrals() {
+        try {
+            const response = await fetch('/api/referrals'); // Update this URL to your actual API endpoint
+            const data = await response.json();
+            return data.referrals;
+        } catch (error) {
+            console.error('Error fetching referral data:', error);
+            return [];
+        }
+    }
+
+    // Function to display referrals
+    function displayReferrals(referrals) {
+        referralsContainer.innerHTML = '';
+
+        if (referrals.length === 0) {
+            referralsContainer.innerHTML = '<p>You have 0 referrals</p>';
+        } else {
+            referrals.forEach(referral => {
+                const referralElement = document.createElement('div');
+                referralElement.classList.add('referral');
+
+                referralElement.innerHTML = `
+                    <div class="referral-header">
+                        <div class="referral-info">
+                            <p>${referral.name}</p>
+                            <p>${referral.tier} | ${referral.points.toLocaleString()}</p>
+                        </div>
+                        <p class="referral-reward">+${referral.reward.toLocaleString()}</p>
+                    </div>
+                    <div class="referral-progress">
+                        <div class="progress-bar" style="width: ${referral.progress}%;"></div>
+                    </div>
+                `;
+
+                referralsContainer.appendChild(referralElement);
+            });
+        }
+    }
+
+    // Fetch and display referrals on page load
+    fetchReferrals().then(displayReferrals);
 
 });
