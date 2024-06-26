@@ -174,6 +174,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
    const referralsContainer = document.getElementById('referrals-container');
 
+    // Invite button's functionality
+    document.querySelector('.copy-button').addEventListener('click', function() {
+    const url = 'https://your-target-url.com';
+    window.open(url, '_blank');
+});
+    
     // Function to fetch referral data
     async function fetchReferrals() {
         try {
