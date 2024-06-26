@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Invite button's functionality
     document.querySelector('.copy-button').addEventListener('click', function() {
-    const url = 'https://your-target-url.com';
+    const url = 'https://t.me/share/url?url=t.me/thetechpandabot?start=%reflink%';
     window.open(url, '_blank');
 });
     
