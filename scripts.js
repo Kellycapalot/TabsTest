@@ -172,4 +172,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Navigate to the specified URL
         window.open("https://t.me/share/url?url=t.me/thetechpandabot?start=%reflink%", "_blank");
     });
+    document.querySelector('.refinvite-button').addEventListener('click', function() {
+    const url = 'https://t.me/share/url?url=t.me/thetechpandabot?start=%reflink%';
+    window.open(url, '_blank');
+});
+
 });
