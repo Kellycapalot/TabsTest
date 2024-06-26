@@ -172,13 +172,12 @@ document.addEventListener("DOMContentLoaded", function () {
         // Navigate to the specified URL
         window.open("https://t.me/share/url?url=t.me/thetechpandabot?start=%reflink%", "_blank");
     });
-   const referralsContainer = document.getElementById('referrals-container');
-
     // Invite button's functionality
     document.querySelector('.refinvite-button').addEventListener('click', function() {
     const url = 'https://t.me/share/url?url=t.me/thetechpandabot?start=%reflink%';
     window.open(url, '_blank');
 });
+   const referralsContainer = document.getElementById('referrals-container');
     
     // Function to fetch referral data
     async function fetchReferrals() {
