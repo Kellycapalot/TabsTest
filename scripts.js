@@ -31,6 +31,11 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('first_name').innerText = user.first_name;
         document.getElementById('last_name').innerText = user.last_name;
         document.getElementById('user_id').innerText = user.id;
+
+        // Generate the referral link
+        const referralLink = `https://t.me/YourBotUsername?start=${user.id}`;
+        document.getElementById('tg
+                                referral_link').value = referralLink;
     } else {
         console.error('User data is not available');
     }
@@ -208,4 +213,5 @@ document.addEventListener("DOMContentLoaded", function () {
     // Fetch and display referrals on page load
     fetchReferrals().then(displayReferrals);
 
-});
+}
+                         );
