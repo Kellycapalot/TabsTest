@@ -13,7 +13,40 @@ document.addEventListener("DOMContentLoaded", function () {
         // Ensure the WebApp is marked as ready
         window.Telegram.WebApp.ready();
 
-       
+       window.onload = function() {
+    const telegram = window.Telegram.WebApp;
+
+    if (!telegram.initDataUnsafe || !telegram.initDataUnsafe.user) {
+        // Redirect or show an error if the web app is not opened from Telegram
+        document.body.innerHTML = '<h1>Become a tech panda on mobile!</h1>';
+        return;
+    }
+
+    console.log('Telegram Web App Initialized:', telegram);
+
+    const user = telegram.initDataUnsafe.user;
+    console.log('User Data:', user);
+
+    if (user) {
+        document.getElementById('first_name').innerText = user.first_name;
+        document.getElementById('last_name').innerText = user.last_name;
+        document.getElementById('user_id').innerText = user.id;
+
+        // Generate the referral link
+        const referralLink = `https://t.me/thetechpandabot?start=${user.id}`;
+        document.getElementById('tgreferral_link').value = referralLink;
+
+        // Handle share button click
+        document.getElementById('refinvite_button').onclick = function() {
+            const message = encodeURIComponent(`Check out TheTechPanda and work your way to become a TechPanda! Here is my referral link: ${referralLink}`);
+            const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(referralLink)}&text=${message}`;
+            window.open(shareUrl, '_blank');
+        };
+    } else {
+        console.error('User data is not available');
+    }
+};
+
         // Additional logging for troubleshooting
         console.log("Added ready event handler");
     } else {
