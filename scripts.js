@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Handle copy button click
         document.getElementById('refcopy_button').onclick = function() {
-            const referralInput = document.getElementById('referral_link');
+            const referralInput = document.getElementById('tgreferral_link');
             referralInput.select();
             referralInput.setSelectionRange(0, 99999); // For mobile devices
 
