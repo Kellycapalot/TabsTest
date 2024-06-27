@@ -149,6 +149,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add an event listener to the button
     invitefrbutton.addEventListener("click", function() {
         // Navigate to the specified URL
+        const message = encodeURIComponent(`Check out TheTechPanda and work your way to become a TechPanda! Here is my referral link: ${referralLink}`);
+            const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(referralLink)}&text=${message}`;
+            console.log('Share URL:', shareUrl); // Debugging log
         window.open(shareUrl, "_blank");
     });
 
