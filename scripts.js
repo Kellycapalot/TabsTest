@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Ensure the WebApp is marked as ready
         window.Telegram.WebApp.ready();
 
-       window.onload = function() {
     const telegram = window.Telegram.WebApp;
 
     if (!telegram.initDataUnsafe || !telegram.initDataUnsafe.user) {
@@ -46,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         console.error('User data is not available');
     }
-};
 
         // Additional logging for troubleshooting
         console.log("Added ready event handler");
