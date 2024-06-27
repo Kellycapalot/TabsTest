@@ -32,6 +32,19 @@ document.addEventListener("DOMContentLoaded", function () {
             window.open(shareUrl, '_blank');
         };
 
+        // Handle copy button click
+        document.getElementById('refcopy_button').onclick = function() {
+            const referralInput = document.getElementById('referral_link');
+            referralInput.select();
+            referralInput.setSelectionRange(0, 99999); // For mobile devices
+
+            navigator.clipboard.writeText(referralInput.value).then(() => {
+                alert('Referral link copied to clipboard!');
+            }, (err) => {
+                console.error('Failed to copy text: ', err);
+            });
+        };
+
         // Get the button element by its ID
     const invitefrbutton = document.getElementById("invitefr-button");
 
