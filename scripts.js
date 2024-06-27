@@ -17,38 +17,17 @@ document.addEventListener("DOMContentLoaded", function () {
         window.Telegram.WebApp.onEvent('ready', function() {
             console.log("Telegram Web App is now ready");
 
-            // Log the entire initDataUnsafe object
-            const initDataUnsafe = window.Telegram.WebApp.initDataUnsafe;
-            console.log("initDataUnsafe:", initDataUnsafe);
+            // Generate UserID
+           window.onload = function() {
+    const telegram = window.Telegram.WebApp;
+    const user = telegram.initDataUnsafe.user;
 
-            if (initDataUnsafe) {
-                // Extract user data
-                const user = initDataUnsafe.user;
-                console.log("User Data:", user);
-
-                if (user) {
-                    const firstName = user.first_name || 'N/A';
-                    const lastName = user.last_name || 'N/A';
-                    const userId = user.id || 'unknown';
-
-                    document.getElementById('first-name').textContent = firstName;
-                    document.getElementById('last-name').textContent = lastName;
-
-                    // Generate a unique referral link
-                    const baseUrl = "https://yourwebsite.com/referral";
-                    const referralLink = `${baseUrl}?ref=${userId}`;
-
-                    // Display the referral link
-                    const referralUrlElement = document.getElementById('referral-url');
-                    referralUrlElement.href = referralLink;
-                    referralUrlElement.textContent = referralLink;
-                } else {
-                    document.getElementById('user-info').textContent = 'No user information available';
-                    document.getElementById('referral-link').textContent = '';
-                }
-            } else {
-                console.error("initDataUnsafe is not defined or is empty");
-            }
+    if (user) {
+        document.getElementById('first_name').innerText = user.first_name;
+        document.getElementById('last_name').innerText = user.last_name;
+        document.getElementById('user_id').innerText = user.id;
+    }
+};
         });
 
         // Additional logging for troubleshooting
