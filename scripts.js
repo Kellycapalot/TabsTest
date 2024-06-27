@@ -17,17 +17,29 @@ document.addEventListener("DOMContentLoaded", function () {
         window.Telegram.WebApp.onEvent('ready', function() {
             console.log("Telegram Web App is now ready");
 
-            // Generate UserID
-           window.onload = function() {
+            window.onload = function() {
     const telegram = window.Telegram.WebApp;
+
+    if (!telegram.initDataUnsafe || !telegram.initDataUnsafe.user) {
+        // Redirect or show an error if the web app is not opened from Telegram
+        document.body.innerHTML = '<h1>Please open this web app from Telegram.</h1>';
+        return;
+    }
+
+    console.log('Telegram Web App Initialized:', telegram);
+
     const user = telegram.initDataUnsafe.user;
+    console.log('User Data:', user);
 
     if (user) {
         document.getElementById('first_name').innerText = user.first_name;
         document.getElementById('last_name').innerText = user.last_name;
         document.getElementById('user_id').innerText = user.id;
+    } else {
+        console.error('User data is not available');
     }
 };
+
         });
 
         // Additional logging for troubleshooting
