@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('user_id').innerText = user.id;
 
         // Generate the referral link
-        const referralLink = `https://t.me/YourBotUsername?start=${user.id}`;
+        const referralLink = `https://t.me/thetechpandabot?start=${user.id}`;
         document.getElementById('tgreferral_link').value = referralLink;
     } else {
         console.error('User data is not available');
@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     // Invite button's functionality
     document.querySelector('.refinvite-button').addEventListener('click', function() {
-    const url = 'https://t.me/share/url?url=t.me/thetechpandabot?start=%reflink%';
+    const url = 'https://t.me/share/url?url=https://t.me/thetechpandabot?start=${user.id}';
     window.open(url, '_blank');
 });
    const referralsContainer = document.getElementById('referrals-container');
