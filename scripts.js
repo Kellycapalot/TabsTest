@@ -2,17 +2,6 @@ console.log("Custom script loaded");
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM fully loaded and parsed");
-    
-    // Ensure the Telegram WebApp script is loaded
-    if (window.Telegram) {
-        console.log("Telegram Web App script loaded");
-
-        // Check WebApp version for additional debug info
-        console.log("Telegram WebApp version:", window.Telegram.WebApp.version);
-
-        // Ensure the WebApp is marked as ready
-        window.Telegram.WebApp.ready();
-
     const telegram = window.Telegram.WebApp;
 
     if (!telegram.initDataUnsafe || !telegram.initDataUnsafe.user) {
@@ -46,11 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
         console.error('User data is not available');
     }
 
-        // Additional logging for troubleshooting
-        console.log("Added ready event handler");
-    } else {
-        console.error("Telegram Web App script not loaded");
-    }
 // Tab switching functionality
     const tabButtons = document.querySelectorAll(".tab-button");
     const tabContents = document.querySelectorAll(".tab-content");
