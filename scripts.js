@@ -159,13 +159,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add an event listener to the button
     invitefrbutton.addEventListener("click", function() {
         // Navigate to the specified URL
-        window.open("https://t.me/share/url?url=t.me/thetechpandabot?start=%reflink%", "_blank");
+        window.open(shareUrl, "_blank");
     });
-    // Invite button's functionality
-    document.querySelector('.refinvite-button').addEventListener('click', function() {
-    const url = 'https://t.me/share/url?url=https://t.me/thetechpandabot?start=${user.id}';
-    window.open(url, '_blank');
-});
+
+    // Handle share button click
+        document.getElementById('refinvite_button').onclick = function() {
+            const message = encodeURIComponent(`Check out TheTechPanda and work your way to become a TechPanda! Here is my referral link: ${referralLink}`);
+            const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(referralLink)}&text=${message}`;
+            window.open(shareUrl, '_blank');
+    } else {
+        console.error('User data is not available');
+    }
+
    const referralsContainer = document.getElementById('referrals-container');
     
     // Function to fetch referral data
