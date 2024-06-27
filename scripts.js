@@ -31,6 +31,18 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log('Share URL:', shareUrl); // Debugging log
             window.open(shareUrl, '_blank');
         };
+
+        // Get the button element by its ID
+    const invitefrbutton = document.getElementById("invitefr-button");
+
+    // Add an event listener to the button
+    invitefrbutton.addEventListener("click", function() {
+        // Navigate to the specified URL
+        const message = encodeURIComponent(`Check out TheTechPanda and work your way to become a TechPanda! Here is my referral link: ${referralLink}`);
+            const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(referralLink)}&text=${message}`;
+            console.log('Share URL:', shareUrl); // Debugging log
+        window.open(shareUrl, "_blank");
+    });
     } else {
         console.error('User data is not available');
     }
@@ -142,17 +154,6 @@ document.addEventListener("DOMContentLoaded", function () {
     xfollowbutton.addEventListener("click", function() {
         // Navigate to the specified URL
         window.open("https://x.com/thetechpandabot", "_blank");
-    });
-    // Get the button element by its ID
-    const invitefrbutton = document.getElementById("invitefr-button");
-
-    // Add an event listener to the button
-    invitefrbutton.addEventListener("click", function() {
-        // Navigate to the specified URL
-        const message = encodeURIComponent(`Check out TheTechPanda and work your way to become a TechPanda! Here is my referral link: ${referralLink}`);
-            const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(referralLink)}&text=${message}`;
-            console.log('Share URL:', shareUrl); // Debugging log
-        window.open(shareUrl, "_blank");
     });
 
    const referralsContainer = document.getElementById('referrals-container');
