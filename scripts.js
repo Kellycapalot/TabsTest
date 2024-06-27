@@ -34,8 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Generate the referral link
         const referralLink = `https://t.me/YourBotUsername?start=${user.id}`;
-        document.getElementById('tg
-                                referral_link').value = referralLink;
+        document.getElementById('tgreferral_link').value = referralLink;
     } else {
         console.error('User data is not available');
     }
@@ -213,5 +212,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Fetch and display referrals on page load
     fetchReferrals().then(displayReferrals);
 
-}
-                         );
+});
