@@ -36,10 +36,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const referralLink = `https://t.me/thetechpandabot?start=${user.id}`;
         document.getElementById('tgreferral_link').value = referralLink;
 
-        // Handle share button click
+        // Handle invite button click
         document.getElementById('refinvite_button').onclick = function() {
             const message = encodeURIComponent(`Check out TheTechPanda and work your way to become a TechPanda! Here is my referral link: ${referralLink}`);
             const shareUrl = `https://t.me/share/url?url=${encodeURIComponent(referralLink)}&text=${message}`;
+            console.log('Share URL:', shareUrl); // Debugging log
             window.open(shareUrl, '_blank');
         };
     } else {
@@ -166,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add an event listener to the button
     invitefrbutton.addEventListener("click", function() {
         // Navigate to the specified URL
-        window.open(shareUrl, '_blank');
+        window.open(shareUrl, "_blank");
     });
 
    const referralsContainer = document.getElementById('referrals-container');
