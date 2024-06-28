@@ -3,6 +3,8 @@ console.log("Custom script loaded");
 document.addEventListener("DOMContentLoaded", function () {
     console.log("DOM fully loaded and parsed");
     const telegram = window.Telegram.WebApp;
+    const urlParams = new URLSearchParams(window.location.search);
+    const referrerId = urlParams.get('start');
 
     if (!telegram.initDataUnsafe || !telegram.initDataUnsafe.user) {
         // Redirect or show an error if the web app is not opened from Telegram
@@ -56,6 +58,26 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log('Share URL:', shareUrl); // Debugging log
         window.open(shareUrl, "_blank");
     });
+
+        fetch('/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                telegramId: user.id,
+                firstName: user.first_name,
+                lastName: user.last_name,
+                referrerId: referrerId,
+            }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('User registered/updated successfully:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
     } else {
         console.error('User data is not available');
     }
