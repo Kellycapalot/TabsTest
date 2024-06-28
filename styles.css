@@ -335,6 +335,10 @@ h3 {
     background-color: #5753d6;
 }
 
+.refinvite-button p {
+    margin: 10px 0;
+}
+
 .referral {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
